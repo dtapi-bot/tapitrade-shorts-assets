@@ -1,0 +1,120 @@
+<title>TapiTrade Analytics — Affiche</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; }
+
+  .slide {
+    width: 1080px;
+    height: 1920px;
+    position: relative;
+    overflow: hidden;
+    background-color: #040C1A;
+    background-image:
+      radial-gradient(ellipse 75% 55% at 22% 20%, rgba(26,64,200,0.48) 0%, transparent 62%),
+      radial-gradient(ellipse 80% 50% at 50% 100%, rgba(254,239,119,0.07) 0%, transparent 60%),
+      radial-gradient(rgba(120,150,255,0.38) 2px, transparent 2px);
+    background-size: 100% 100%, 100% 100%, 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 90px 96px;
+    color: #fff;
+  }
+
+  .icon-badge {
+    width: 148px; height: 148px;
+    border-radius: 34px;
+    background: #091428;
+    border: 1px solid rgba(255,255,255,0.10);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 0 8px rgba(26,64,200,0.10), 0 20px 60px rgba(0,0,0,0.5);
+  }
+  .icon-badge svg { width: 84px; height: 84px; }
+
+  .title {
+    font-size: 108px;
+    font-weight: 800;
+    text-align: center;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    margin-top: 48px;
+  }
+  .title .accent { color: #4D72FF; display: block; }
+
+  .tagline {
+    font-size: 42px;
+    font-weight: 700;
+    color: #F4F6FF;
+    text-align: center;
+    line-height: 1.4;
+    letter-spacing: -0.005em;
+    margin-top: 44px;
+    max-width: 840px;
+  }
+
+  .checklist {
+    margin-top: 68px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    width: 100%;
+    max-width: 860px;
+  }
+  .check-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 31px;
+    font-weight: 600;
+    color: #C6CEE3;
+  }
+  .check-icon {
+    flex-shrink: 0;
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: rgba(77,114,255,0.14);
+    border: 1px solid rgba(77,114,255,0.4);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .check-icon svg { width: 22px; height: 22px; }
+
+  /* ── Animations d'entree (memes courbes que visual_short_template.html) ── */
+  @keyframes fadeSlideUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes popIn { from { opacity: 0; transform: scale(0.72); } to { opacity: 1; transform: scale(1); } }
+
+  .icon-badge { animation: popIn 0.5s cubic-bezier(.34,1.56,.64,1) 0.05s both; }
+  .title { animation: fadeSlideUp 0.55s ease-out 0.18s both; }
+  .tagline { animation: fadeSlideUp 0.55s ease-out 0.34s both; }
+  .checklist .check-item:nth-child(1) { animation: fadeSlideUp 0.45s ease-out 0.48s both; }
+  .checklist .check-item:nth-child(2) { animation: fadeSlideUp 0.45s ease-out 0.58s both; }
+  .checklist .check-item:nth-child(3) { animation: fadeSlideUp 0.45s ease-out 0.68s both; }
+</style>
+
+<div class="slide">
+  <div class="icon-badge">
+    <svg viewBox="0 0 60 60" fill="none">
+      <defs><linearGradient id="bolt" x1="17" y1="9" x2="43" y2="51" gradientUnits="userSpaceOnUse"><stop stop-color="#4A9AFF"/><stop offset="1" stop-color="#004AAD"/></linearGradient></defs>
+      <path d="M34 9 L17 34 L27 34 L25 51 L43 26 L33 26 Z" fill="url(#bolt)"/>
+    </svg>
+  </div>
+
+  <div class="title">TapiTrade<span class="accent">Analytics</span></div>
+
+  <div class="tagline">L'analyse fondamentale d'une entreprise, simplifiée en un score sur 100.</div>
+
+  <div class="checklist">
+    <div class="check-item">
+      <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#4D72FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+      Score TapiTrade sur chaque entreprise
+    </div>
+    <div class="check-item">
+      <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#4D72FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+      Croissance, Rentabilité, Santé, Valorisation
+    </div>
+    <div class="check-item">
+      <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#4D72FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+      Screener, Watchlist &amp; Potentiel Swing
+    </div>
+  </div>
+</div>
